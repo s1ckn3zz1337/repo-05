@@ -37,5 +37,27 @@ todo: Auschnitt der ür die Requests wichtigen Komponenten(lesbarer als gesamtbi
 
 
  ## Vorgehen zur Analyse des Request ablaufs 
-todo: Debugging der Klasse Request 
 
+<img alt="" src="images/image2.png" style="width: 850.50px; height: 384.28px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="">
+
+<img alt="" src="images/image10.png" style="width: 602.00px; height: 669.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="">
+
+<img alt="" src="images/image4.png" style="width: 1142.28px; height: 715.88px; margin-left: -297.90px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="">
+
+<img alt="" src="images/image1.png" style="width: 602.00px; height: 740.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="">
+
+<img alt="" src="images/image8.png" style="width: 910.51px; height: 569.08px; margin-left: -247.51px; margin-top: -147.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="">
+
+<img src="Bilder/image4.png ">
+
+<img src="Bilder/image2.png ">
+
+<img src="Bilder/image10.png ">
+
+<img src="Bilder/image2.png ">
+
+<img src="Bilder/image10.png ">
+
+<img src="Bilder/image2.png ">
+
+<img src="Bilder/image10.png ">
