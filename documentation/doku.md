@@ -37,27 +37,61 @@ todo: Auschnitt der ür die Requests wichtigen Komponenten(lesbarer als gesamtbi
 
 
  ## Vorgehen zur Analyse des Request ablaufs 
+ 
+1.Aufgabenstellung
 
-<img alt="" src="Bilder/image2.png" style="width: 850.50px; height: 384.28px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="">
+Das Ziel dieses Dokuments ist die Dokumentation der Verarbeitung ein Requests in der Standardversion des Apache Tomcat Servers in der Version 6.0.53. Die Dokumentation erfolgt unter Zuhilfenahme der IDE IntelliJ 2016.2.
 
-<img alt="" src="Bilder/image10.png" style="width: 602.00px; height: 669.33px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="">
+2.Vorgehensweise
 
-<img alt="" src="Bilder/image4.png" style="width: 1142.28px; height: 715.88px; margin-left: -297.90px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="">
+Der Einstiegspunkt der Dokumentation bildet die Klasse Request und RequestFacade in dem Package: org.apache.catalina.connector. Diese Klassen dient der Darstellung und verarbeitung einer einzelnen Anfrage eines HTTP Clients. Es wurde in diesen Klasse nach Methoden gesucht, welche einen Namen passend zur Aufgabenstellung, der verarbeitung einer Anfrage/Requests haben.
+Danach wurde nach allen Dateien gesucht, welche die Request Klasse verwenden.
 
-<img alt="" src="Bilder/image1.png" style="width: 602.00px; height: 740.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="">
+<img src="Bilder/image2.png ">
 
-<img alt="" src="Bilder/image8.png" style="width: 910.51px; height: 569.08px; margin-left: -247.51px; margin-top: -147.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title="">
+Nach dem Setzen eine Breakpoints in dem Request constructor konnte der Klasse org.apache.catalina.Connector die Methode service gefunden werden, welche einen Request und einen Response Objekt als Parameter übernimmt und diese verarbeitet.
+
+<img src="Bilder/image10.png ">
+
+Bei dem weiteren durchsuchen des Codes ist die Invoke Methode aufgefallen.
+
+<img src="Bilder/image1.png ">
+
+Dabei wurde festgestellt, dass die Verarbeitung des Request durch ein Context Object erfolgt.
+Also wurde nach dem Context Object gesucht und dabei in jedem Konstruktor ein breakpoint gesetzt und danach Tomcat 6 neu gestartet.
 
 <img src="Bilder/image4.png ">
 
-<img src="Bilder/image2.png ">
+Dabei wurde eine Methode gefunden welche die Ordner nach den Dateien durchsucht welche dann als Applikationen geladen werden können.
 
-<img src="Bilder/image10.png ">
+<img src="Bilder/image8.png ">
 
-<img src="Bilder/image2.png ">
+Dabei wurde auch eine Methode mit dem Namen deployApps() gefunden, welche anscheinend für das Platzieren von Java Applikationen in dem ServerContext verantwortlich ist.
 
-<img src="Bilder/image10.png ">
+<img src="Bilder/image6.png ">
 
-<img src="Bilder/image2.png ">
+Bei der Durchsuchung der Verzeichnisse, welche vorher im Debugger zu sehen waren,  nach der Benutzung des Requestobjektes wurden Java Class Files gefunden, in welchen Requestsin einem Java Programm verarbeitet und an den Client mit einem Response beantwortet werden. Beispielhaft dafür ist die Classe RequestInfoExample.
 
-<img src="Bilder/image10.png ">
+<img src="Bilder/image5.png ">
+
+Bei der Suche nach weiter Aufrufen dieser Klasse, wurde festgestellt, dass jede Java Klasse als Servlet  in der datei web.xml in dem übergeordneten Ordner definiert werden muss.
+
+<img src="Bilder/image3.png ">
+
+Bei weiterem durchschauen der web.xml wurde der Abschnitt für den Pfadfilter gefunden.
+Dieser schreibt das URL - Pattern für die einzelnen Servlets vor und wann diese Servlets geladen werden sollen. Dies erfolgt durch Filter Classen.
+Aus diesen Information und der nachfolgenden Ordnerstruktur lässt sich der Pfad zum Abrufen des RequestInfoExample Servlets so ableiten:
+
+localhost:8080/examples/servlets/servlet/RequestInfoExample.
+
+<img src="Bilder/image7.png ">
+
+Die Ordnerstruktur lässt das selbe Ergebniss vermuten.
+
+<img src="Bilder/image9.png ">
+
+Die Ausgabe wurde leicht modifiziert um die Richtigkeit der Ergebnisse zu garantieren.
+
+<img src="Bilder/image11.png ">
+
+Ein Aufruf der Methode doGet der Classe RequestInfoExample durch einen GET Request aus dem Chrome - Browser.
