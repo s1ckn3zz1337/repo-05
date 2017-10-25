@@ -1,15 +1,15 @@
 
 #  Assignment 3: Architektur-Archäologie
 ## Beschreibung
-Ziel war zu erkennen wie die  Architektur von Apache Tomcat Version 6.053 aufgebaut ist. Speziell solten hierbei gezeigt werden wie mit Request anfragen an den Tomcat-Server umgegangen wird. Mithilfe der Konsolenbefehle grep und sed sollten dabei die Import statements der Code Dokumente analysiert und extrahiert werden. Als Tool zur anschließenden Visualisierung der Architektur dienten uns graphviz.
+Ziel war zu erkennen wie die  Architektur von Apache Tomcat Version 6.053 aufgebaut ist. Speziell solten hierbei gezeigt werden wie mit Request-Anfragen an den Tomcat-Server umgegangen wird. Mithilfe der Konsolenbefehle grep und sed sollten dabei die Import Statements der Code Dokumente analysiert und extrahiert werden. Als Tool zur anschließenden Visualisierung der Architektur dienten uns graphviz.
 ## Vorgehen 
-**1.** Im ersten Schritt haben wir uns einen groben überblick über die Paketstruktur bzw. Ordenerstruktur von Tomcat mithilfe von Eclipse verschaft. 
+**1.** Im ersten Schritt haben wir uns einen groben überblick über die Paketstruktur bzw. Ordenerstruktur von Tomcat mithilfe von Eclipse verschafft. 
 Aufgefallen sind uns hierbei die Pakete catalina, jasper und coyote
 
-**2.** Im zweiten Schritt haben wir uns überlegt, welche Ordner bzw. Dokumente wir nach Import Statements zum erstellen des .dot Files durchsuchen. Rausgeflogen sind hier die pakete javax und tomcat.util... . Da diese nicht als nicht relevant für den Ablauf erachtet wurden. 
+**2.** Im zweiten Schritt haben wir uns überlegt, welche Ordner bzw. Dokumente wir nach Import Statements zum erstellen des .dot Files durchsuchen. Rausgeflogen sind hier die pakete javax und tomcat.util... . Da diese als nicht relevant für den Ablauf erachtet wurden. 
 
 **3.**  Anschließend haben wir im Ordner .../apache-tomcat-6.0.53-src/java/org/apache
-mithilfe der Befehle grep und sed die Dokumente durchsucht und daraus mithilfe von graphviz einen Graph erzeugt.
+mithilfe der Befehle grep und sed die Dokumente durchsucht und daraus mithilfe von graphviz einen Graph der Paketstruktur erzeugt.
 
 ```bash
 #!/bin/bash
@@ -38,7 +38,7 @@ Aufgefallen sind uns die folgenden Komponenten:
 
 
 
-**4.**Um den Aufbau der Komponeten besser zu verstehen, und da der Graph sehr unübersichtlich ist, haben wir diesen noch in seine einzelnen zuvor gefundenen Komponenten geteilt. Hierfür wurde der skriptbefehl wie folgt angepasst: 
+**4.** Um den Aufbau der Komponeten besser zu verstehen, und da der Graph sehr unübersichtlich ist, haben wir diesen noch in seine einzelnen zuvor gefundenen Komponenten geteilt. Hierfür wurde der skriptbefehl wie folgt angepasst: 
 
 
 ```bash
@@ -54,25 +54,23 @@ grep -v "juli_logging" | grep -v "tomcat_util" | grep " -> cat.*" | \
 grep -v " -> catalina_" | sort | uniq >> $name.dot ; echo "}" >> $name.dot ; \
 dot -Tpdf $name.dot > $name.pdf 
 ```
-**Catalina**
+Catalina
 <img src="pdf/coyote.png ">
 
-**Coyote** 
+Coyote
 <img src="pdf/coyote.png ">
 
-**Jasper**
+Jasper
 <img src="pdf/jasper.png " height = "100">
 
-**Catalina-Core**
+Catalina-Core
 <img src="pdf/coyote.png ">
 
-**Catalina Connector**
+Catalina Connector
 <img src="pdf/coyote.png ">
 
-**Catalina Util**
+Catalina Util
 <img src="pdf/coyote.png ">
-
-
 
 
  ## Vorgehen zur Analyse des Request ablaufs 
