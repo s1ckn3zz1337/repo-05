@@ -29,32 +29,50 @@ Ergebnis:
 Aufgefallen sind uns die folgenden Komponenten:
 
 * Catalina 
+* Coyote
+* Jasper
 * Catalina-Core
 * Catalina Connector
 * Catalina Util
-* Coyote
-* Jasper
 
 
-**4.** Da der Graph sehr unübersichtlich ist haben wir diesen noch in seine einzelnen zuvor gefundenen Komponenten geteit.
 
-**Catalina** 
 
-scriptCatalinaCore.sh:
+**4.**Um den Aufbau der Komponeten besser zu verstehen, und da der Graph sehr unübersichtlich ist, haben wir diesen noch in seine einzelnen zuvor gefundenen Komponenten geteilt. Hierfür wurde der skriptbefehl wie folgt angepasst: 
+
+
 ```bash
 #!/bin/bash
-name=catalinaCore
+# name muss für jede Komponente angepasst werden!
+name=catalina
 echo "digraph {" > $name.dot ; grep -R "^import" * | sed -E "s/\//./g" | \
 sed -E "s/\.java//g" | sed -E "s/\.\*//g" | sed -E "s/import //g" | \
 grep -v ":java" | grep -v ":javax" | sed -E "s/;//g" | sed -E "s/:/ -> /" | \
 grep -v "\.properties" | sed -E "s/\./_/g" | sed -E "s/_[A-Z].* ->/ ->/g" | \
 sed -E "s/-> ([a-z_]*)_[A-Z][a-zA-Z]*/-> \1/g" | sed -E "s/org_apache_//g" | \
-grep -v "juli_logging" | grep -v "tomcat_util" | grep " -> catalina_core.*" | \
- sort | uniq >> $name.dot ; echo "}" >> $name.dot ; \
+grep -v "juli_logging" | grep -v "tomcat_util" | grep " -> cat.*" | \
+grep -v " -> catalina_" | sort | uniq >> $name.dot ; echo "}" >> $name.dot ; \
 dot -Tpdf $name.dot > $name.pdf 
 ```
-Ausgabe:
-<img src="pdf/catalinaCore.png "  height="100">
+**Catalina**
+<img src="pdf/coyote.png ">
+
+**Coyote** 
+<img src="pdf/coyote.png ">
+
+**Jasper**
+<img src="pdf/jasper.png " height = "100">
+
+**Catalina-Core**
+<img src="pdf/coyote.png ">
+
+**Catalina Connector**
+<img src="pdf/coyote.png ">
+
+**Catalina Util**
+<img src="pdf/coyote.png ">
+
+
 
 
  ## Vorgehen zur Analyse des Request ablaufs 
