@@ -55,7 +55,7 @@ grep -v " -> catalina_" | sort | uniq >> $name.dot ; echo "}" >> $name.dot ; \
 dot -Tpdf $name.dot > $name.pdf 
 ```
 Catalina
-<img src="pdf/coyote.png ">
+<img src="pdf/catalina.png ">
 
 Coyote
 <img src="pdf/coyote.png ">
@@ -64,13 +64,13 @@ Jasper
 <img src="pdf/jasper.png " height = "100">
 
 Catalina-Core
-<img src="pdf/coyote.png ">
+<img src="pdf/catalinaCore.png ">
 
-Catalina Connector
-<img src="pdf/coyote.png ">
+Catalina-Connector
+<img src="pdf/catalinaConnector.png ">
 
 Catalina Util
-<img src="pdf/coyote.png ">
+<img src="pdf/catalinaUtil.png ">
 
 
  ## Vorgehen zur Analyse des Request ablaufs 
