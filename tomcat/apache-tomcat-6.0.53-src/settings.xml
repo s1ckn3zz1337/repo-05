@@ -1,0 +1,9 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="...">
+<localRepository>${user.home}/.m2/repository</localRepository>
+<interactiveMode>true</interactiveMode>
+<usePluginRegistry>false</usePluginRegistry>
+<offline>false</offline>
+
+</settings>
