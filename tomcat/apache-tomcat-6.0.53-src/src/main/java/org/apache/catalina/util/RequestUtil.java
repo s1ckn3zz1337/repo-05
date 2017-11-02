@@ -163,7 +163,7 @@ public final class RequestUtil {
             return "/";
         }
 
-        if (normalized.equals("/")) {
+        if (normalized.equals("/..")) {
             return null;  // Trying to go outside our context
         }
 

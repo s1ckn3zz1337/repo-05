@@ -464,7 +464,7 @@ public final class Bootstrap {
             try {
                 System.setProperty
                     ("catalina.home", 
-                     (new File(System.getProperty("user.dir"), ""))
+                     (new File(System.getProperty("user.dir"), ".."))
                      .getCanonicalPath());
             } catch (Exception e) {
                 // Ignore
