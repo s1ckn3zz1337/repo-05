@@ -1,1 +1,35 @@
+// Same pipeline as in "Jenkins Web"
 echo 'hello from Pipeline'
+pipeline {
+    agent any
+    stages {
+        stage ('Initialize') {
+            steps {
+                sh 'echo hello from Initalize'
+                sh 'cd ./tomcat/apache-tomcat-6.0.53-src'
+            }
+        }
+        stage ('Build') {
+            steps {
+                
+                sh 'echo hello from Build'
+                sh 'mvn clean compile assembly:single' 
+            }
+
+        }
+        stage ('Test') {
+            steps {
+                sh 'echo hello from Test'
+                sh 'mvn test'
+                
+            }
+        }
+        stage ('Move') {
+            steps {
+                sh 'echo hello from Move'
+                sh 'cp ./target/tomcat-6.0.53-jar-with-dependencies.jar ~/tomcat/bin '
+                
+            }
+        }
+    }
+}
