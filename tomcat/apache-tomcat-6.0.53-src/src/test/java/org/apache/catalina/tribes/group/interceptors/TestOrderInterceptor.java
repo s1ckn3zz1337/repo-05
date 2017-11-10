@@ -84,7 +84,7 @@ public class TestOrderInterceptor {
         Thread.sleep(1000);
     }
 
-    @Test
+    //@Test
     public void testOrder1() throws Exception {
         Member[] dest = channels[0].getMembers();
         final AtomicInteger value = new AtomicInteger(0);
