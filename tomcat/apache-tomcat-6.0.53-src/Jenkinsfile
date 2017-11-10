@@ -27,7 +27,7 @@ pipeline {
         stage ('Move') {
             steps {
                 sh 'echo hello from Move'
-                sh 'cp ./target/tomcat-6.0.53-jar-with-dependencies.jar ~/tomcat/bin '
+                sh 'cp -uv ./target/tomcat-6.0.53-jar-with-dependencies.jar ~/tomcat/bin '
                 
             }
         }
