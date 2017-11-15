@@ -21,7 +21,7 @@ pipeline {
             }
 		post{
 			success{
-				archiveArtifacts(artifacts: 'apache-tomcat-6.0.53-src/target/tomcat-6.0.53-jar-with-dependencies.jar', allowEmptyArchive: true)
+				archiveArtifacts(artifacts: './tomcat/apache-tomcat-6.0.53-src/target/tomcat-6.0.53-jar-with-dependencies.jar', allowEmptyArchive: true)
 			}
 		}
         }
