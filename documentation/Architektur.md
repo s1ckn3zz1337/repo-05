@@ -1,7 +1,7 @@
 
 #  Assignment 3: Architektur-Archäologie
 ## Beschreibung
-Ziel war zu erkennen wie die  Architektur von Apache Tomcat Version 6.053 aufgebaut ist. Speziell solten hierbei gezeigt werden wie mit Request-Anfragen an den Tomcat-Server umgegangen wird. Mithilfe der Konsolenbefehle grep und sed sollten dabei die Import Statements der Code Dokumente analysiert und extrahiert werden. Als Tool zur anschließenden Visualisierung der Architektur dienten uns graphviz.
+Das Ziel war es zu erkennen wie die Architektur von Apache Tomcat Version 6.053 aufgebaut ist. Speziell sollten hierbei gezeigt werden wie mit Request-Anfragen an den Tomcat-Server umgegangen wird. Mithilfe der Konsolenbefehle grep und sed sollten dabei die Import Statements der Code Dokumente analysiert und extrahiert werden. Als Tool zur anschließenden Visualisierung der Architektur dienten uns graphviz.
 ## Vorgehen 
 **1.** Im ersten Schritt haben wir uns einen groben überblick über die Paketstruktur bzw. Ordenerstruktur von Tomcat mithilfe von Eclipse verschafft. 
 Aufgefallen sind uns hierbei die Pakete catalina, jasper und coyote

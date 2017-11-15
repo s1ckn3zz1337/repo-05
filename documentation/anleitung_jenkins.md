@@ -8,11 +8,20 @@ Jenkins sollte anschließend über die URL http://**Adresse**:8080 erreichbar se
 
 ## Konfiguration von Jenkins
 Jenkins über die Browser URL http://**Adresse**:8080 aufrufen und über den zuvor angelegegten User Einloggen.
-<img src="Bilder/jenkins/login.png ">
+<img src="Bilder/jenkins/1_login.png">
 
 Beschreibung...
 
-<img src="Bilder/jenkins/anlegen.png ">
+<img src="Bilder/jenkins/2_anlegen.png">
+Beschreibung.....
+
+<img src="Bilder/jenkins/3_credentials.png">
 
 Beschreibung.....
-<img src="Bilder/jenkins/typ.png ">
+<img src="Bilder/jenkins/4_typ.png">
+Beschreibung.....
+
+<img src="Bilder/jenkins/5_pipelineconfig.png">
+Beschreibung.....
+
+<img src="Bilder/jenkins/6_pipeline.png">
