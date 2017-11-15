@@ -8,10 +8,9 @@ pipeline {
     stages {
         stage ('Initialize'){
             steps {
-                sh 'echo hello from Initalize;'
-                'cd .. ;'
-                'echo BEIM INIT ---------$PWD;'
-                'mvn clean'
+                sh 'echo hello from Initalize'
+                sh 'echo BEIM INIT ---------$PWD'
+                sh 'mvn clean'
             }
         }
         stage ('Build') {
