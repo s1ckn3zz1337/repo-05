@@ -21,14 +21,14 @@ Zur Installation von **Jenkins** per **SSH-Shell** mit dem Server verbinden und 
 4. Haken bei **GitHub-Projekt** setzen und Github URL des Repositories eingeben.
 <img src="Bilder/jenkins/github.png">
 
-5. Pipeline nach dem Makierten Schema hinzufügen und Github Nutzer hinzufügen.
+5. **Pipeline** nach dem Makierten Schema hinzufügen und Github Nutzer hinzufügen.
 <img src="Bilder/jenkins/5_pipelineconfig.png">
 
 6. Github **Benutzername** und **Passwort** in die Makierten Felder eingeben und hinzufügen 
 
     <img src="Bilder/jenkins/3_credentials.png">
 
-7. Zum Abschluss Speichern 
+7. Zum Abschluss **Speichern** 
 
 ## Pipeline
 
