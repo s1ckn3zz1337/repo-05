@@ -7,7 +7,7 @@ Zur Installation von Jenkins per SSH-Shell mit dem Server verbinden und anschlie
 Jenkins sollte anschließend über die URL http://**Adresse**:8080 erreichbar sein. Bei **Adresse** handelt es sich um die IP-Adresse des Servers.
 
 ## Konfiguration von Jenkins
-Beschreibung...
+Jenkins über die Browser URL http://**Adresse**:8080 aufrufen und über den zuvor angelegegten User Einloggen.
 <img src="Bilder/jenkins/login.png ">
 
 Beschreibung...
