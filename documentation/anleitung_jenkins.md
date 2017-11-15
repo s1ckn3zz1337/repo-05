@@ -12,7 +12,7 @@ Jenkins sollte anschließend über die URL http://**Adresse**:8080 erreichbar se
 
 2. Anschließend Element anlegen auswählen
 
-<img src="Bilder/jenkins/2_anlegen.png">
+    <img src="Bilder/jenkins/2_anlegen.png">
 
 
 3. Name eingeben und und Elementyp "Pipeline" auswählen.
