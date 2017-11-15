@@ -6,7 +6,8 @@ pipeline {
         pollSCM('H/5 * * * *')
     }
     stages {
-        stage ('Initialize') {
+        stage ('Initialize') 
+        dir('./tomcat/apache-tomcat-6.0.53-src/'){
             steps {
                 sh 'echo hello from Initalize'
                 sh 'cd ..'
