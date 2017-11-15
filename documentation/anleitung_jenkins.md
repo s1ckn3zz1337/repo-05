@@ -25,3 +25,17 @@ Beschreibung.....
 Beschreibung.....
 
 <img src="Bilder/jenkins/6_pipeline.png">
+
+## Pipeline
+### Initialisierug
+
+
+### Build
+
+### Test
+
+### Deployment 
+Wo sind die Jars ?
+
+##Probleme 
+Git Commit Trigger
