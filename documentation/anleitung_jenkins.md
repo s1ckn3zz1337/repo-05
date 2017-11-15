@@ -11,7 +11,9 @@ Jenkins über die Browser URL http://**Adresse**:8080 aufrufen und über den zuv
 <img src="Bilder/jenkins/1_login.png">
 
 Anschließend Element anlegen auswählen
+
 <img src="Bilder/jenkins/2_anlegen.png">
+
 
 Name eingeben und und Elementyp "Pipeline" auswählen.
 <img src="Bilder/jenkins/4_typ.png">
