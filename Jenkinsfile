@@ -21,7 +21,7 @@ pipeline {
             }
 		post{
 			success{
-				archiveArtifacts(artifacts: './tomcat/apache-tomcat-6.0.53-src/target/tomcat-6.0.53-jar-with-dependencies.jar', allowEmptyArchive: true)
+				sh 'mkdir tomcat/bin; cp -uv ./tomcat/apache-tomcat-6.0.53-src/target/tomcat-6.0.53-jar-with-dependencies.jar tomcat/bin'
 			}
 		}
         }
@@ -29,16 +29,13 @@ pipeline {
             steps {
 		sh 'cd ./tomcat/apache-tomcat-6.0.53-src ; mvn clean'
                 sh 'echo hello from Test'
-                sh 'cd ./tomcat/apache-tomcat-6.0.53-src ; mvn test'
-                
+                sh 'cd ./tomcat/apache-tomcat-6.0.53-src ; mvn test'   
             }
-        }
-        stage ('Move') {
-            steps {
-                sh 'echo hello from Move'
-                sh 'cd ./tomcat/apache-tomcat-6.0.53-src ; mkdir -p ~/tomcat/bin ;ls ./target/ ; cp -uv ./target/tomcat-6.0.53-jar-with-dependencies.jar ~/tomcat/bin '
-                
-            }
+		post{
+			success{
+				sh 'mkdir -p ~/tomcat/bin; cp -uv ./tomcat/bin/target/tomcat-6.0.53-jar-with-dependencies.jar ~/tomcat/bin'
+			}
+		}
         }
     }
 }
