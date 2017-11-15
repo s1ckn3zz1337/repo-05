@@ -1,11 +1,7 @@
 // Same pipeline as in "Jenkins Web"
 echo 'hello from Pipeline'
 pipeline {
-    agent{
-        node{
-            customWorkspace './tomcat/apache-tomcat-6.0.53-src/'
-        }
-    }  
+    agent any
     triggers{
         pollSCM('H/5 * * * *')
     }
