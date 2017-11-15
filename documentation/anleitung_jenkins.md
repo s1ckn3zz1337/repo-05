@@ -42,14 +42,16 @@ das tomcat - jar gebaut. Der dritte Befehlt ist ein list für das Ausgabeverzeic
 Ist dieses nicht leer, wird ein Erfolg ( "success" ) Schritt eingeleitet. Dieser kopiert das tomcat jar aus dem Ausgabeverezeichniss in das Verzeichniss tomcat/bin. Dabei werden bereits vorhandere Dateien überschrieben.
 
 ### Test
-
+Für die Tests wird in das Projektverzeichniss gewechselt. Danach wird mit mvn clean ein Befehl zum säubern des Projektes ausgeführt. Danach werden mit dem mvn test Befehl die Tests von tomcat laufen lassen. Bei einem Error wird dieser Schritt 
+fehlschlagen. Bei Erfolg wird das aktuelle tomcat Jar in das Benutzerverzeichniss in tomcat/bin kopiert.
 
 ### Ergebniss
 
 <img src="Bilder/jenkins/6_pipeline.png">
 
-### Deployment 
-Wo sind die Jars ?
+### Deployment
+Wo sind die Jars?
+Wie werden sie Ausgeführt?
 
 ## Probleme 
 Da der bereitgestellte Server nur über das Hochschulnetz erreichbar ist konnte das Github-Jenkins-Plugin nicht über die "Jenkins-Hook-URL" einen Build Triggern.    (siehe [Anleitung](https://medium.com/@marc_best/trigger-a-jenkins-build-from-a-github-push-b922468ef1ae)) Jenkins wurde deshalb auf einen 5 Minuten Trigger-Intervall eingestell.
