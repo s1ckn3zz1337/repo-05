@@ -33,7 +33,7 @@ pipeline {
             }
 		post{
 			success{
-				sh 'mkdir -p ~/tomcat/bin; cp -uv ./tomcat/bin/target/tomcat-6.0.53-jar-with-dependencies.jar ~/tomcat/bin'
+				sh 'mkdir -p ~/tomcat/bin; cp -uv ./tomcat/bin/tomcat-6.0.53-jar-with-dependencies.jar ~/tomcat/bin'
 			}
 		}
         }
