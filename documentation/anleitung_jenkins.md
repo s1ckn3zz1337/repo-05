@@ -44,5 +44,5 @@ Zum Abschluss Speichern
 ### Deployment 
 Wo sind die Jars ?
 
-##Probleme 
-Git Commit Trigger 
+## Probleme 
+Da der bereitgestellte Server nur über das Hochschulnetz erreichbar ist konnte das Github-Jenkins-Plugin nicht über die "Jenkins-Hook-URL" einen Build Triggern.    (siehe [Anleitung](https://medium.com/@marc_best/trigger-a-jenkins-build-from-a-github-push-b922468ef1a)) Jenkins wurde deshalb auf einen 5 Minuten Trigger-Intervall eingestell.
