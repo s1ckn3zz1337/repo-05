@@ -10,23 +10,25 @@ Jenkins sollte anschließend über die URL http://**Adresse**:8080 erreichbar se
 Jenkins über die Browser URL http://**Adresse**:8080 aufrufen und über den zuvor angelegegten User Einloggen.
 <img src="Bilder/jenkins/1_login.png">
 
-Beschreibung...
-
+Anschließend Element anlegen auswählen
 <img src="Bilder/jenkins/2_anlegen.png">
-Beschreibung.....
 
+Name eingeben und und Elementyp "Pipeline" auswählen.
+<img src="Bilder/jenkins/4_typ.png">
+
+Haken bei GitHub-Projekt setzen und Github URL des Repositories eingeben.
+<img src="Bilder/jenkins/github.png">
+
+Pipeline nach dem Makierten Schema hinzufügen und Github Nutzer hinzufügen.
+<img src="Bilder/jenkins/5_pipelineconfig.png">
+
+Github Benutzername und Passwort in die Makierten Felder eingeben und hinzufügen 
 <img src="Bilder/jenkins/3_credentials.png">
 
-Beschreibung.....
-<img src="Bilder/jenkins/4_typ.png">
-Beschreibung.....
-
-<img src="Bilder/jenkins/5_pipelineconfig.png">
-Beschreibung.....
-
-<img src="Bilder/jenkins/6_pipeline.png">
+Zum Abschluss Speichern 
 
 ## Pipeline
+
 ### Initialisierug
 
 
@@ -34,8 +36,13 @@ Beschreibung.....
 
 ### Test
 
+
+### Ergebniss
+
+<img src="Bilder/jenkins/6_pipeline.png">
+
 ### Deployment 
 Wo sind die Jars ?
 
 ##Probleme 
-Git Commit Trigger
+Git Commit Trigger 
