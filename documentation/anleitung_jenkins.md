@@ -36,6 +36,10 @@ Zuerst wird der Build initialisiert. Das passiert indem in das Projektverzeichni
 Danach wird der Befehl maven clean aufgerufen
 
 ### Build
+Bei dem Buildstep wird zuerst in das Projektverzeichniss gewechselt. Danach wird tomcat mit dem Befehl 
+mvn clean compile assembly:single 
+das tomcat - jar gebaut. Der dritte Befehlt ist ein list für das Ausgabeverzeichniss des jars.
+Ist dieses nicht leer, wird ein Erfolg ( "success" ) Schritt eingeleitet. Dieser kopiert das tomcat jar aus dem Ausgabeverezeichniss in das Verzeichniss tomcat/bin. Dabei werden bereits vorhandere Dateien überschrieben.
 
 ### Test
 
