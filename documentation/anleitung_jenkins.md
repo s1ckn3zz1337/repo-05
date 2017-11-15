@@ -45,6 +45,7 @@ Jenkins sollte anschließend über die URL http://**Adresse**:8080 erreichbar se
 
 ### Deployment 
 Wo sind die Jars ?
+Wie werden sie Ausgeführt?
 
 ## Probleme 
 Da der bereitgestellte Server nur über das Hochschulnetz erreichbar ist konnte das Github-Jenkins-Plugin nicht über die "Jenkins-Hook-URL" einen Build Triggern.    (siehe [Anleitung](https://medium.com/@marc_best/trigger-a-jenkins-build-from-a-github-push-b922468ef1ae)) Jenkins wurde deshalb auf einen 5 Minuten Trigger-Intervall eingestell.
