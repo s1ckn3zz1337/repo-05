@@ -6,13 +6,12 @@ pipeline {
         pollSCM('H/5 * * * *')
     }
     stages {
-        stage ('Initialize') 
-        dir('./tomcat/apache-tomcat-6.0.53-src/'){
+        stage ('Initialize'){
             steps {
-                sh 'echo hello from Initalize'
-                sh 'cd ..'
-                sh 'echo BEIM INIT ---------$PWD'
-                sh 'mvn clean'
+                sh 'echo hello from Initalize;'
+                'cd .. ;'
+                'echo BEIM INIT ---------$PWD;'
+                'mvn clean'
             }
         }
         stage ('Build') {
