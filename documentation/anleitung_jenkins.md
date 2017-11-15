@@ -12,7 +12,7 @@ Jenkins sollte anschließend über die URL http://**Adresse**:8080 erreichbar se
 
 2. Anschließend Element anlegen auswählen
 
-    <img src="Bilder/jenkins/2_anlegen.png">
+<img src="Bilder/jenkins/2_anlegen.png">
 
 
 3. Name eingeben und und Elementyp "Pipeline" auswählen.
@@ -32,7 +32,8 @@ Jenkins sollte anschließend über die URL http://**Adresse**:8080 erreichbar se
 ## Pipeline
 
 ### Initialisierug
-
+Zuerst wird der Build initialisiert. Das passiert indem in das Projektverzeichniss gewechselt wird.
+Danach wird der Befehl maven clean aufgerufen
 
 ### Build
 
@@ -45,7 +46,6 @@ Jenkins sollte anschließend über die URL http://**Adresse**:8080 erreichbar se
 
 ### Deployment 
 Wo sind die Jars ?
-Wie werden sie Ausgeführt?
 
 ## Probleme 
 Da der bereitgestellte Server nur über das Hochschulnetz erreichbar ist konnte das Github-Jenkins-Plugin nicht über die "Jenkins-Hook-URL" einen Build Triggern.    (siehe [Anleitung](https://medium.com/@marc_best/trigger-a-jenkins-build-from-a-github-push-b922468ef1ae)) Jenkins wurde deshalb auf einen 5 Minuten Trigger-Intervall eingestell.
