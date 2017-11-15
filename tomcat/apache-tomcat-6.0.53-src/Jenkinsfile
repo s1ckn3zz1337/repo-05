@@ -9,7 +9,7 @@ pipeline {
         stage ('Initialize') {
             steps {
                 sh 'echo hello from Initalize'
-                sh 'cd ./tomcat/apache-tomcat-6.0.53-src'
+                sh 'cd ./tomcat/apache-tomcat-6.0.53-src/'
                 sh 'echo BEIM INIT ---------$PWD'
                 sh 'mvn clean'
             }
