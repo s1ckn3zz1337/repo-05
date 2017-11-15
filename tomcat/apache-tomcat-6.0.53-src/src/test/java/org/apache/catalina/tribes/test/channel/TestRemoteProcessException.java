@@ -70,7 +70,7 @@ public class TestRemoteProcessException {
 
     //@Test
     public void testDataSendSYNCACK() throws Exception {
-        System.err.println("Starting SYNC_ACK");
+       /* System.err.println("Starting SYNC_ACK");
         int errC=0, nerrC=0;
         for (int i=0; i<msgCount; i++) {
             boolean error = Data.r.nextBoolean();
@@ -102,7 +102,8 @@ public class TestRemoteProcessException {
                 listener1.noErrCnt + listener1.errCnt);
         System.out.println("Listener 1 stats:");
         listener1.printStats(System.out);
-    }
+    */
+}
 
     public static class Listener implements ChannelListener {
         long noErrCnt = 0;

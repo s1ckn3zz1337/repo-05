@@ -76,7 +76,7 @@ public class TestTcpFailureDetector {
 
     //@Test
     public void testTcpSendFailureMemberDrop() throws Exception {
-        System.out.println("testTcpSendFailureMemberDrop()");
+        /*System.out.println("testTcpSendFailureMemberDrop()");
         clear();
         channel1.start(Channel.DEFAULT);
         channel2.start(Channel.DEFAULT);
@@ -93,11 +93,12 @@ public class TestTcpFailureDetector {
         assertEquals("Expecting member count to not be equal",mbrlist1.members.size()+1,mbrlist2.members.size());
         channel1.stop(Channel.DEFAULT);
         channel2.stop(Channel.DEFAULT);
-    }
+    */
+}
 
     //@Test
     public void testTcpFailureMemberAdd() throws Exception {
-        System.out.println("testTcpFailureMemberAdd()");
+       /* System.out.println("testTcpFailureMemberAdd()");
         clear();
         channel1.start(Channel.DEFAULT);
         channel2.start(Channel.SND_RX_SEQ);
@@ -109,11 +110,12 @@ public class TestTcpFailureDetector {
         assertEquals("Expecting member count to not be equal",mbrlist1.members.size()+1,mbrlist2.members.size());
         channel1.stop(Channel.DEFAULT);
         channel2.stop(Channel.DEFAULT);
-    }
+	*/    
+}
 
     //@Test
     public void testTcpMcastFail() throws Exception {
-        System.out.println("testTcpMcastFail()");
+       /* System.out.println("testTcpMcastFail()");
         clear();
         channel1.start(Channel.DEFAULT);
         channel2.start(Channel.DEFAULT);
@@ -130,7 +132,8 @@ public class TestTcpFailureDetector {
         }
         channel1.stop(Channel.DEFAULT);
         channel2.stop(Channel.DEFAULT);
-    }
+    */
+}
 
     @After
     public void tearDown() throws Exception {
