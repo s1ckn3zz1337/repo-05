@@ -17,8 +17,13 @@ pipeline {
             steps {
                 sh 'echo hello from Build'
                 sh 'cd ./tomcat/apache-tomcat-6.0.53-src ; mvn clean compile assembly:single' 
+		sh 'ls ./tomcat/apache-tomcat-6.0.53-src/target/'
             }
-
+		post{
+			success{
+				archiveArtifacts(artifacts: 'apache-tomcat-6.0.53-src/target/tomcat-6.0.53-jar-with-dependencies.jar', allowEmptyArchive: true)
+			}
+		}
         }
         stage ('Test') {
             steps {
