@@ -31,7 +31,7 @@ pipeline {
         stage ('Move') {
             steps {
                 sh 'echo hello from Move'
-                sh 'cd ./tomcat/apache-tomcat-6.0.53-src ; mkdir -p ~/tomcat/bin ; cp -uv ./target/tomcat-6.0.53-jar-with-dependencies.jar ~/tomcat/bin '
+                sh 'cd ./tomcat/apache-tomcat-6.0.53-src ; mkdir -p ~/tomcat/bin ;ls ./target/ ; cp -uv ./target/tomcat-6.0.53-jar-with-dependencies.jar ~/tomcat/bin '
                 
             }
         }
