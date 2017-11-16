@@ -32,6 +32,25 @@ Zur Installation von **Jenkins** per **SSH-Shell** mit dem Server verbinden und 
 
 ## Pipeline
 
+### Build Trigger
+
+Mithilfe von **triggers** wird alle 5 Minuten der Build gestartert.
+```
+triggers{pollSCM('H/5 * * * *')}
+```
+Der Zeitintervall des Pollings kann nach folgendem Schema angepasst werden:
+```
+*     *     *     *     *  Befehl der ausgeführt werden soll
+-     -     -     -     -
+|     |     |     |     |
+|     |     |     |     +----- Wochentag (0 - 7) (Sonntag ist 0 und 7; oder Namen, siehe unten)
+|     |     |     +------- Monat (1 - 12)
+|     |     +--------- Tag (1 - 31)
+|     +----------- Stunde (0 - 23)
++------------- Minute (0 - 59; oder Namen, siehe unten)
+```
+[Ausführliche Beschreibung](https://wiki.ubuntuusers.de/Cron/)
+
 ### Initialisierug
 Zuerst wird der build initialisiert. Das passiert, indem in das Projektverzeichniss gewechselt wird.
 Danach wird der Befehl **maven clean** aufgerufen
@@ -91,7 +110,10 @@ Anhand eines **Balkendiagramms** kann der Fortschritt des Prozesses für jeden e
 <img src="Bilder/jenkins/6_pipeline.png">
 
 ### Deployment
-Wenn der Prozess Erfolgreich war, dann befindet sich im Homeverzeichniss ```~/tomcat/bin/``` eine ausführbare **jar** Datei.
+Wenn der Prozess Erfolgreich war, dann befindet sich im Homeverzeichniss ```~/tomcat/bin/``` eine ausführbare **jar** Datei. Diese kann mit in dem Verzeichniss mit folgenden Befehl ausgeführt werden:
+```bash
+java -jar tomcat-6.0.53-jar-with-dependencies.jar
+```
 
 
 ## Probleme 
