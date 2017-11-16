@@ -110,7 +110,7 @@ Anhand eines **Balkendiagramms** kann der Fortschritt des Prozesses für jeden e
 <img src="Bilder/jenkins/6_pipeline.png">
 
 ### Deployment
-Wenn der Prozess Erfolgreich war, dann befindet sich im Homeverzeichniss ```~/tomcat/bin/``` eine ausführbare **jar** Datei. Diese kann mit in dem Verzeichniss mit folgenden Befehl ausgeführt werden:
+Wenn der Prozess Erfolgreich war, dann befindet sich im Homeverzeichniss ```~/tomcat/bin/``` eine ausführbare **jar** Datei. Diese kann in dem Verzeichniss mit folgenden Befehl ausgeführt werden:
 ```bash
 java -jar tomcat-6.0.53-jar-with-dependencies.jar
 ```
